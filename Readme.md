@@ -17,6 +17,9 @@ Je n'ai pas retouché la moindre ligne de code. J'ai laissé l'agent Antigravity
 L'application semble parfaitement fonctionnelle, bien que je n'ai pas conduit des tests systématiques et exhaustifs. Faites-vous (et moi) plaisir, essayez:
 - Clonez le repo
 - Installez les dépendances `npm install`
+- Configurez la base de données MySQL et le fichier `.env`
+- `node ace generate:key`
+- Initialisez la base de données avec les seeders `node ace migration:fresh --seed`
 - Lancez l'application `npm run dev`
 - Testez les fonctionnalités
 
