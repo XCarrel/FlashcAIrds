@@ -1,10 +1,10 @@
-@component('components/layout/app', { title: 'New Deck' })
+@component('components/layout/app', { title: 'Nouveau Deck' })
   <div class="max-w-md mx-auto bg-white p-8 rounded shadow">
-    <h1 class="text-2xl font-bold mb-6">New Deck</h1>
+    <h1 class="text-2xl font-bold mb-6">Nouveau Deck</h1>
     <form action="/decks" method="POST">
       {{ csrfField() }}
       <div class="mb-4">
-        <label class="block text-gray-700 mb-2">Title</label>
+        <label class="block text-gray-700 mb-2">Titre</label>
         <input type="text" name="title" class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required>
       </div>
       <div class="mb-6">
@@ -12,8 +12,8 @@
         <textarea name="description" class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" minlength="10" required></textarea>
       </div>
       <div class="flex justify-between items-center">
-        <a href="/" class="text-gray-600 hover:text-gray-900">Cancel</a>
-        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Create</button>
+        <a href="/" class="text-gray-600 hover:text-gray-900">Annuler</a>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Créer</button>
       </div>
     </form>
   </div>

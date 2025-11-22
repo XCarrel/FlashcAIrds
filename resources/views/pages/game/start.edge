@@ -1,6 +1,6 @@
-@component('components/layout/app', { title: 'Start Game' })
+@component('components/layout/app', { title: 'Démarrer le jeu' })
   <div class="max-w-md mx-auto bg-white p-8 rounded shadow text-center">
-    <h1 class="text-2xl font-bold mb-6">Study: {{ deck.title }}</h1>
+    <h1 class="text-2xl font-bold mb-6">Étudier : {{ deck.title }}</h1>
     <p class="mb-8 text-gray-600">{{ deck.description }}</p>
     
     <form action="/decks/{{ deck.id }}/play" method="POST">
@@ -10,15 +10,15 @@
         <div class="flex justify-center gap-4">
           <label class="flex items-center gap-2 cursor-pointer">
             <input type="radio" name="mode" value="basic" checked class="w-4 h-4 text-blue-600">
-            <span>Basic (Sequential)</span>
+            <span>Basique (Séquentiel)</span>
           </label>
           <label class="flex items-center gap-2 cursor-pointer">
             <input type="radio" name="mode" value="random" class="w-4 h-4 text-blue-600">
-            <span>Random</span>
+            <span>Aléatoire</span>
           </label>
         </div>
       </div>
-      <button type="submit" class="bg-blue-500 text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-blue-600 transition transform hover:scale-105">Let's Go!</button>
+      <button type="submit" class="bg-blue-500 text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-blue-600 transition transform hover:scale-105">C'est parti !</button>
     </form>
   </div>
 @end

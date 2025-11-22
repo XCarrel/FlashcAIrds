@@ -1,12 +1,12 @@
-@component('components/layout/app', { title: 'Finished' })
+@component('components/layout/app', { title: 'Terminé' })
   <div class="max-w-md mx-auto bg-white p-8 rounded shadow text-center">
-    <h1 class="text-3xl font-bold mb-4 text-blue-600">Finished!</h1>
-    <p class="text-xl mb-8">You scored <span class="font-bold">{{ correct }}</span> out of <span class="font-bold">{{ total }}</span></p>
+    <h1 class="text-3xl font-bold mb-4 text-blue-600">Terminé !</h1>
+    <p class="text-xl mb-8">Vous avez obtenu <span class="font-bold">{{ correct }}</span> sur <span class="font-bold">{{ total }}</span></p>
     
     <div class="w-full bg-gray-200 rounded-full h-4 mb-8">
       <div class="bg-blue-600 h-4 rounded-full" style="width: {{ (correct / total) * 100 }}%"></div>
     </div>
 
-    <a href="/decks/{{ deckId }}" class="bg-blue-500 text-white px-8 py-3 rounded hover:bg-blue-600 transition">Back to Deck</a>
+    <a href="/decks/{{ deckId }}" class="bg-blue-500 text-white px-8 py-3 rounded hover:bg-blue-600 transition">Retour au Deck</a>
   </div>
 @end

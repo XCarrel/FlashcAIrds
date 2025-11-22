@@ -21,3 +21,7 @@ Cet utilisateur et mot de passe est bien reconnu parce que je n'ai plus de messa
 
 Lorsque l'on retourne une carte, il n'y a aucune réponse qui est affichée. La carte est vide. Plus exactement, elle contient la réponse, mais celle-ci est invisible. Le code HTML, contenu dans la carte et le suivant : (html...)
 
+### l'application est en anglais
+
+Je constate que tous les éléments de navigation (bouton, lien) sont en anglais. Je les veux en français.
+
