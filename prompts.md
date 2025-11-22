@@ -2,31 +2,38 @@
 
 ### Initial
 
-Je veux que tu crées une application complète avec AdonisJS.  
-Il y a une base de données MySQL disponible localement qui s'appelle 'flashcards'.  
-Le fonctionnement de cette application est décrit par le document 'Analyse fonctionnelle' de ce repo.  
-Je veux que les seeders de l'application ajoute à la base de données six deck de Carte sur le thème des animaux: mammifère, insectes, poisson, reptiles, batraciens, oiseaux
+> Je veux que tu crées une application complète avec AdonisJS.  
+> Il y a une base de données MySQL disponible localement qui s'appelle 'flashcards'.  
+> Le fonctionnement de cette application est décrit par le document 'Analyse fonctionnelle' de ce repo.  
+> Je veux que les seeders de l'application ajoute à la base de données six deck de Carte sur le thème des animaux: mammifère, insectes, poisson, reptiles, batraciens, oiseaux
 
 ### Users
 
-Je veux que les seeders créent un utilisateur par défaut 'admin', mot de passe '1q2w3e4r'
+> Je veux que les seeders créent un utilisateur par défaut 'admin', mot de passe '1q2w3e4r'
 
 ### Le login ne marche pas
 
-Cet utilisateur et mot de passe est bien reconnu parce que je n'ai plus de message d'erreur. Par contre je reviens toujours à la page login, je n'arrive pas à la homepage
+> Cet utilisateur et mot de passe est bien reconnu parce que je n'ai plus de message d'erreur. Par contre je reviens toujours à la page login, je n'arrive pas à la homepage
 
 (quota limit, changement de modèle Gemini 3 -> Claude 4.5)
 
 ### La réponse sur les cartes est invisible
 
-Lorsque l'on retourne une carte, il n'y a aucune réponse qui est affichée. La carte est vide. Plus exactement, elle contient la réponse, mais celle-ci est invisible. Le code HTML, contenu dans la carte et le suivant : (html...)
+> Lorsque l'on retourne une carte, il n'y a aucune réponse qui est affichée. La carte est vide. Plus exactement, elle contient la réponse, mais celle-ci est invisible. Le code HTML, contenu dans la carte et le suivant : (html...)
+
+[commit](https://github.com/XCarrel/FlashcAIrds/commit/39361ac9a5756be319446821aff92ae5b7feed63)
 
 ### l'application est en anglais
 
-Je constate que tous les éléments de navigation (bouton, lien) sont en anglais. Je les veux en français.
+> Je constate que tous les éléments de navigation (bouton, lien) sont en anglais. Je les veux en français.
+
+[commit](https://github.com/XCarrel/FlashcAIrds/commit/65eaebe49bb83b0656d621654606697683a96313)
 
 ### inscription non fonctionnelle
 
-Je n'arrive pas à m'inscrire. Quand je clique le bouton, j'ai ceci :
-RuntimeException
-Missing method "show" on "RegistersController {}"
+> Je n'arrive pas à m'inscrire. Quand je clique le bouton, j'ai ceci :
+> RuntimeException
+> Missing method "show" on "RegistersController {}"
+
+[commit](https://github.com/XCarrel/FlashcAIrds/commit/61afeca34fa607d15b275a5e37ea898c7608490a)
+
