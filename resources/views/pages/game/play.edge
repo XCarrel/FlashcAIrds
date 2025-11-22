@@ -1,0 +1,50 @@
+@component('components/layout/app', { title: 'Study' })
+  <div class="max-w-md mx-auto">
+    <div class="mb-4 text-center text-gray-500">
+      Card {{ game.currentIndex + 1 }} / {{ game.cardIds.length }}
+    </div>
+
+    <div class="bg-white h-64 rounded shadow-lg flex justify-center items-center cursor-pointer relative perspective-1000 mb-8" onclick="flipCard()">
+      <div id="card-front" class="absolute inset-0 backface-hidden flex justify-center items-center p-8 text-center transition-transform duration-600">
+        <h2 class="text-2xl font-bold">{{ card.question }}</h2>
+        <p class="absolute bottom-4 text-gray-400 text-sm">Click to show answer</p>
+      </div>
+      <div id="card-back" class="absolute inset-0 backface-hidden rotate-y-180 bg-blue-50 flex justify-center items-center p-8 text-center transition-transform duration-600">
+        <h2 class="text-2xl font-bold text-blue-800">{{ card.answer }}</h2>
+      </div>
+    </div>
+
+    <div id="actions" class="flex justify-center gap-4 opacity-0 transition-opacity duration-300 pointer-events-none">
+      <form action="/game/answer" method="POST">
+        {{ csrfField() }}
+        <input type="hidden" name="result" value="incorrect">
+        <button type="submit" class="bg-red-500 text-white px-6 py-3 rounded hover:bg-red-600 transition">Incorrect</button>
+      </form>
+      <form action="/game/answer" method="POST">
+        {{ csrfField() }}
+        <input type="hidden" name="result" value="correct">
+        <button type="submit" class="bg-green-500 text-white px-6 py-3 rounded hover:bg-green-600 transition">Correct</button>
+      </form>
+    </div>
+
+    <style>
+      .perspective-1000 { perspective: 1000px; }
+      .backface-hidden { backface-visibility: hidden; }
+      .rotate-y-180 { transform: rotateY(180deg); }
+      .flipped #card-front { transform: rotateY(180deg) !important; }
+      .flipped #card-back { transform: rotateY(0deg) !important; }
+    </style>
+
+    <script>
+      function flipCard() {
+        const card = document.querySelector('.perspective-1000');
+        const actions = document.getElementById('actions');
+        
+        if (!card.classList.contains('flipped')) {
+          card.classList.add('flipped');
+          actions.classList.remove('opacity-0', 'pointer-events-none');
+        }
+      }
+    </script>
+  </div>
+@end

@@ -1,0 +1,21 @@
+@component('components/layout/app', { title: 'Edit Card' })
+  <div class="max-w-md mx-auto bg-white p-8 rounded shadow">
+    <h1 class="text-2xl font-bold mb-6">Edit Card</h1>
+    <p class="mb-4 text-gray-600">Deck: {{ deck.title }}</p>
+    <form action="/decks/{{ deck.id }}/cards/{{ card.id }}?_method=PUT" method="POST">
+      {{ csrfField() }}
+      <div class="mb-4">
+        <label class="block text-gray-700 mb-2">Question (min 10 chars)</label>
+        <textarea name="question" class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" minlength="10" required>{{ card.question }}</textarea>
+      </div>
+      <div class="mb-6">
+        <label class="block text-gray-700 mb-2">Answer</label>
+        <textarea name="answer" class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required>{{ card.answer }}</textarea>
+      </div>
+      <div class="flex justify-between items-center">
+        <a href="/decks/{{ deck.id }}" class="text-gray-600 hover:text-gray-900">Cancel</a>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Save</button>
+      </div>
+    </form>
+  </div>
+@end

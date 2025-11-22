@@ -1,0 +1,36 @@
+@component('components/layout/app', { title: 'Card' })
+  <div class="max-w-md mx-auto">
+    <div class="mb-6">
+      <a href="/decks/{{ deck.id }}" class="text-blue-500 hover:underline">&larr; Back to Deck</a>
+    </div>
+
+    <div class="bg-white h-64 rounded shadow-lg flex justify-center items-center cursor-pointer relative perspective-1000" onclick="this.classList.toggle('flipped')">
+      <div class="absolute inset-0 backface-hidden flex justify-center items-center p-8 text-center transition-transform duration-600">
+        <h2 class="text-2xl font-bold">{{ card.question }}</h2>
+        <p class="absolute bottom-4 text-gray-400 text-sm">Click to flip</p>
+      </div>
+      <div class="absolute inset-0 backface-hidden rotate-y-180 bg-blue-50 flex justify-center items-center p-8 text-center transition-transform duration-600">
+        <h2 class="text-2xl font-bold text-blue-800">{{ card.answer }}</h2>
+      </div>
+    </div>
+    
+    <style>
+      .perspective-1000 { perspective: 1000px; }
+      .backface-hidden { backface-visibility: hidden; }
+      .rotate-y-180 { transform: rotateY(180deg); }
+      .flipped .backface-hidden:first-child { transform: rotateY(180deg) !important; }
+      .flipped .backface-hidden:last-child { transform: rotateY(0deg) !important; }
+    </style>
+
+    <div class="mt-8 flex justify-between items-center">
+      <div class="flex gap-2">
+         <a href="/decks/{{ deck.id }}/cards/{{ card.id }}/edit" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Edit</a>
+         <form action="/decks/{{ deck.id }}/cards/{{ card.id }}?_method=DELETE" method="POST" onsubmit="return confirm('Delete this card?');">
+            {{ csrfField() }}
+            <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Delete</button>
+         </form>
+      </div>
+      <a href="/decks/{{ deck.id }}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">OK</a>
+    </div>
+  </div>
+@end

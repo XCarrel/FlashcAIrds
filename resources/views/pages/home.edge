@@ -1,0 +1,18 @@
+@component('components/layout/app', { title: 'My Decks' })
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-2xl font-bold">My Decks</h1>
+    <a href="/decks/create" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Add Deck</a>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    @each(deck in decks)
+      <div class="bg-white p-6 rounded shadow hover:shadow-lg transition cursor-pointer" onclick="window.location='/decks/{{ deck.id }}'">
+        <h2 class="text-xl font-bold mb-2">{{ deck.title }}</h2>
+        <p class="text-gray-600 mb-4">{{ deck.description }}</p>
+        <div class="text-sm text-gray-500">{{ deck.cards ? deck.cards.length : 0 }} cards</div>
+      </div>
+    @else
+      <p class="text-gray-600">You don't have any decks yet.</p>
+    @end
+  </div>
+@end
