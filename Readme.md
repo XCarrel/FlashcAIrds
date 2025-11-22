@@ -26,10 +26,10 @@ Je ne suis pas sûr que les maquettes aient servi à quelque chose. Il y a de fo
 
 Il y a environ cinq heures d'écart entre le moment où j'ai commencé cette expérience et celui où je commite ce fichier.
 
-Il faut retirer au moins deux heures de ce total, car j'ai dû interrompre en raison du quota atteint sur le modèle Gemini 3.
+Il faut y retirer deux heures d'attente: j'ai dû m'interrompre en raison du quota atteint sur le modèle Gemini 3.
 
-Il m'a fallu une grosse demi-heure pour régénérer l'analyse en format Mag down, plus m'inquiète en PNG, car l'outil ne parvenait pas à lire le PDF initialement soumis.
+Il m'a fallu une grosse demi-heure pour régénérer l'analyse en markdown + maquettes en PNG, car l'outil ne parvenait pas à lire le PDF initialement soumis.
 
-Le reste du temps, j'ai beaucoup travaillé par intermittence. Pendant que l'agent travaillait, je pouvais faire d'autres choses.
+Le reste du temps, j'ai travaillé par intermittence. Pendant que l'agent travaillait, je pouvais faire d'autres choses.
 
-Si je devais refaire un travail comparable à partir de zéro (c'est-à-dire en ayant déjà fait l'analyse fonctionnelle dans le bon format), j'estime que j'aurais besoin d'environ une demi-heure de mon temps, pris sur un intervalle de 2-3 heures.
+Si je devais refaire un travail comparable à partir de zéro (c'est-à-dire en ayant déjà fait l'analyse fonctionnelle dans le bon format), j'estime que j'aurais besoin d'environ une demi-heure de mon temps, répartis sur un intervalle de 2-3 heures.
