@@ -25,3 +25,8 @@ Lorsque l'on retourne une carte, il n'y a aucune réponse qui est affichée. La 
 
 Je constate que tous les éléments de navigation (bouton, lien) sont en anglais. Je les veux en français.
 
+### inscription non fonctionnelle
+
+Je n'arrive pas à m'inscrire. Quand je clique le bouton, j'ai ceci :
+RuntimeException
+Missing method "show" on "RegistersController {}"
